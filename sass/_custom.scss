@@ -1,0 +1,403 @@
+/* ========= GENERAL ====================== */
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.body-container {
+  flex: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ========= FONTS ====================== */
+
+body {
+  font-family: Montserrat, sans-serif;
+  color: var(--body-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--title-dark);
+}
+
+h1,
+h2 {
+  font-family: "Abril Fatface", cursive;
+  text-align: center;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+h3 {
+  font-family: "Abril Fatface", cursive;
+}
+
+// increase p size at large screen size
+p {
+  @media (min-width: 992px) {
+    font-size: 1.2rem;
+  }
+}
+
+//below - I don't know why inherit makes the anchor text colour go to the background colour?
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
+
+.entry-title {
+  margin: 2rem 0;
+}
+
+/* #### LAYOUT #### */
+
+.site {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.site-main {
+  flex: 1;
+}
+
+/* ========= NAVS ====================== */
+
+// logo spacing
+.custom-logo-link img {
+  height: auto;
+  max-width: 3rem;
+}
+
+// Mobile nav
+.mobile-nav {
+  .menu-primary-menu-container .menu,
+  .menu-primary-menu-container .menu .menu-item,
+  .menu-primary-menu-container .menu .sub-menu {
+    display: block;
+  }
+
+  .navbar.navbar-light .menu-item {
+    display: block !important;
+  }
+
+  .sub-menu {
+    display: block;
+    position: static;
+    padding-left: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .menu-item a {
+    width: 100%;
+    padding: 0.5rem;
+  }
+}
+
+.menu-primary-menu-container {
+  margin-left: auto;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse.d-lg-none {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse.d-lg-none {
+  }
+}
+
+.site-description {
+  margin-top: 0.5rem;
+  color: var(--white);
+}
+
+.menu {
+  margin: 0;
+}
+
+.menu-item a {
+  padding: 1rem;
+  display: inline-block;
+}
+
+.menu .menu-item.current_page_parent > a,
+.menu .menu-item.current_page_item > a {
+  font-weight: 600;
+}
+
+.sub-menu li a {
+  padding: 0.5rem 1rem;
+}
+.sub-menu li {
+  min-width: 245px;
+}
+.menu-item-has-children {
+  position: relative;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background: var(--main-orange-light);
+  top: 4.4rem;
+  left: 0;
+}
+
+.sub-menu .menu-item a {
+  width: 100%;
+}
+
+.menu-item-has-children:hover .sub-menu,
+.menu-item-has-children:active .sub-menu,
+.menu-item-has-children:focus .sub-menu {
+  display: block;
+}
+
+// Mobile nav
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: var(--white);
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: var(--white);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--white);
+}
+
+.navbar-light .navbar-nav .nav-link.disabled {
+  color: var(--white);
+}
+
+// Admin bar offset
+.admin-bar .sticky-top {
+  @media (min-width: 601px) {
+    top: 46px;
+  }
+
+  @media (min-width: 783px) {
+    top: 32px;
+  }
+}
+
+// wordpress outputs this container
+.menu-primary-menu-container .menu {
+  display: flex;
+}
+
+.navbar {
+  padding: 0;
+}
+// nav background
+.navbar-light {
+  background-color: var(--main-orange-light);
+}
+
+// Nav brand title
+.navbar-light .navbar-brand,
+.navbar-light .navbar-brand:hover,
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:active {
+  color: var(--white);
+  font-weight: 600;
+}
+
+// Top level nav items white
+.navbar.navbar-light .menu-item {
+  color: var(--white);
+}
+
+// hover state light orange
+.navbar-light .navbar-nav .menu-item:hover,
+.navbar-light .navbar-nav .menu-item:focus {
+  color: var(--main-orange);
+}
+
+// Active link
+.navbar-light .navbar-nav .menu-item.active {
+  color: var(--main-orange);
+  font-weight: bold;
+}
+
+// toggle button
+#navbarNav {
+  justify-content: flex-end;
+}
+
+// remove outline
+.navbar-light .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0);
+  padding: 0;
+}
+
+// remove box shadow
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+// light hamburger icon overriding default dark
+.navbar-light .navbar-toggler-icon {
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+// full height center flex buttons
+.menu-primary-menu-container,
+.menu-primary-menu-container .menu,
+.navbar.navbar-light .menu-item,
+.menu-item a {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+/* ========= 2x3 Image Grid ====================== */
+.img-grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+.grid-img {
+  max-width: 400px;
+  margin: 1rem 0.75rem;
+
+  @media (min-width: 768px) {
+    margin: 0.75rem;
+  }
+}
+
+@media (min-width: 678px) {
+  .grid-img {
+    display: flex;
+    max-width: 300px;
+  }
+}
+
+/* ========= BANNER IMAGE ====================== */
+.banner-container {
+  width: 100%;
+  background-color: var(--main-orange-light);
+}
+
+.banner-img {
+  width: 100%;
+}
+
+/* ========= BUTTON ====================== */
+.btn-style {
+  background-color: var(--main-orange-light);
+}
+.btn,
+.btn:hover {
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* ========= ABOUT ME SECTION ====================== */
+.about-container {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.about-img {
+  width: 300px;
+}
+
+/* ========= BACK TO TOP BUTTON ====================== */
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: none;
+  color: var(--main-orange-light);
+  background: var(--transparent-white);
+  border-radius: 50%;
+}
+
+/* ========= FOOTER SOCIAL ICONS ====================== */
+.social-icons-container {
+  display: flex;
+  justify-content: center;
+}
+.social-icon {
+  margin: 1rem;
+  height: 55px;
+}
+.etsy {
+  height: 52px;
+  padding-top: 1px;
+}
+
+.footer-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--main-orange-light);
+  color: var(--white);
+  padding: 1rem;
+  align-items: center;
+
+  @media (min-width: 576px) {
+    flex-direction: row;
+  }
+}
+
+/* ========= MODAL ====================== */
+
+.modal-cta-container {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+
+.modal-cta-button {
+  width: 20rem;
+  height: 5rem;
+}
+
+.modal-header {
+  background-color: var(--main-orange-light);
+}
+.modal-title {
+  color: var(--white);
+}

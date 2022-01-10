@@ -1,0 +1,673 @@
+/*!
+Theme Name: Joyce Wong Concept Artist
+Theme URI: http://underscores.me/
+Author: Grace Marsh
+Author URI: https://gracemarsh.github.io/
+Description: Portfolio website for Joyce Wong concept artist
+Version: 1.0.0
+Text Domain: joycewongconceptartist
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+Joyce Wong Concept Artist is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+
+/* ========= COLORS ====================== */
+:root {
+	--main-orange: rgb(240, 155, 20);
+	--main-orange-light: rgb(254, 197, 107);
+	--white: #fff;
+	--body-dark: #0e0c0c;
+	--title-dark: #333;
+	--transparent-white: #fffc;
+}
+
+/* ========= GENERAL ====================== */
+* {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+html,
+body {
+	min-height: 100vh;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+.body-container {
+	flex: 1;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* ========= FONTS ====================== */
+body {
+	font-family: Montserrat, sans-serif;
+	color: var(--body-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--title-dark);
+}
+
+h1,
+h2 {
+	font-family: "Abril Fatface", cursive;
+	text-align: center;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+h3 {
+	font-family: "Abril Fatface", cursive;
+}
+
+@media (min-width: 992px) {
+
+	p {
+		font-size: 1.2rem;
+	}
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+	color: inherit;
+}
+
+.entry-title {
+	margin: 2rem 0;
+}
+
+/* #### LAYOUT #### */
+.site {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.site-main {
+	flex: 1;
+}
+
+/* ========= NAVS ====================== */
+.custom-logo-link img {
+	height: auto;
+	max-width: 3rem;
+}
+
+.mobile-nav .menu-primary-menu-container .menu,
+.mobile-nav .menu-primary-menu-container .menu .menu-item,
+.mobile-nav .menu-primary-menu-container .menu .sub-menu {
+	display: block;
+}
+
+.mobile-nav .navbar.navbar-light .menu-item {
+	display: block !important;
+}
+
+.mobile-nav .sub-menu {
+	display: block;
+	position: static;
+	padding-left: 1rem;
+	font-size: 0.9rem;
+}
+
+.mobile-nav .menu-item a {
+	width: 100%;
+	padding: 0.5rem;
+}
+
+.menu-primary-menu-container {
+	margin-left: auto;
+}
+
+@media (min-width: 992px) {
+
+	.navbar-expand-lg .navbar-collapse.d-lg-none {
+		display: none !important;
+	}
+}
+
+.site-description {
+	margin-top: 0.5rem;
+	color: var(--white);
+}
+
+.menu {
+	margin: 0;
+}
+
+.menu-item a {
+	padding: 1rem;
+	display: inline-block;
+}
+
+.menu .menu-item.current_page_parent > a,
+.menu .menu-item.current_page_item > a {
+	font-weight: 600;
+}
+
+.sub-menu li a {
+	padding: 0.5rem 1rem;
+}
+
+.sub-menu li {
+	min-width: 245px;
+}
+
+.menu-item-has-children {
+	position: relative;
+}
+
+.sub-menu {
+	display: none;
+	position: absolute;
+	z-index: 1;
+	background: var(--main-orange-light);
+	top: 4.4rem;
+	left: 0;
+}
+
+.sub-menu .menu-item a {
+	width: 100%;
+}
+
+.menu-item-has-children:hover .sub-menu,
+.menu-item-has-children:active .sub-menu,
+.menu-item-has-children:focus .sub-menu {
+	display: block;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show > .nav-link {
+	color: var(--white);
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+	color: var(--white);
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: var(--white);
+}
+
+.navbar-light .navbar-nav .nav-link.disabled {
+	color: var(--white);
+}
+
+@media (min-width: 601px) {
+
+	.admin-bar .sticky-top {
+		top: 46px;
+	}
+}
+
+@media (min-width: 783px) {
+
+	.admin-bar .sticky-top {
+		top: 32px;
+	}
+}
+
+.menu-primary-menu-container .menu {
+	display: flex;
+}
+
+.navbar {
+	padding: 0;
+}
+
+.navbar-light {
+	background-color: var(--main-orange-light);
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-brand:hover,
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:active {
+	color: var(--white);
+	font-weight: 600;
+}
+
+.navbar.navbar-light .menu-item {
+	color: var(--white);
+}
+
+.navbar-light .navbar-nav .menu-item:hover,
+.navbar-light .navbar-nav .menu-item:focus {
+	color: var(--main-orange);
+}
+
+.navbar-light .navbar-nav .menu-item.active {
+	color: var(--main-orange);
+	font-weight: bold;
+}
+
+#navbarNav {
+	justify-content: flex-end;
+}
+
+.navbar-light .navbar-toggler {
+	border-color: rgba(0, 0, 0, 0);
+	padding: 0;
+}
+
+.navbar-toggler:focus {
+	box-shadow: none;
+}
+
+.navbar-light .navbar-toggler-icon {
+	background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.menu-primary-menu-container,
+.menu-primary-menu-container .menu,
+.navbar.navbar-light .menu-item,
+.menu-item a {
+	display: flex;
+	height: 100%;
+	align-items: center;
+}
+
+/* ========= 2x3 Image Grid ====================== */
+.img-grid-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-left: -0.75rem;
+	margin-right: -0.75rem;
+}
+
+.grid-img {
+	max-width: 400px;
+	margin: 1rem 0.75rem;
+}
+
+@media (min-width: 768px) {
+
+	.grid-img {
+		margin: 0.75rem;
+	}
+}
+
+@media (min-width: 678px) {
+
+	.grid-img {
+		display: flex;
+		max-width: 300px;
+	}
+}
+
+/* ========= BANNER IMAGE ====================== */
+.banner-container {
+	width: 100%;
+	background-color: var(--main-orange-light);
+}
+
+.banner-img {
+	width: 100%;
+}
+
+/* ========= BUTTON ====================== */
+.btn-style {
+	background-color: var(--main-orange-light);
+}
+
+.btn,
+.btn:hover {
+	color: var(--white);
+	font-size: 24px;
+	font-weight: 400;
+}
+
+/* ========= ABOUT ME SECTION ====================== */
+.about-container {
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.about-img {
+	width: 300px;
+}
+
+/* ========= BACK TO TOP BUTTON ====================== */
+#btn-back-to-top {
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	display: none;
+	color: var(--main-orange-light);
+	background: var(--transparent-white);
+	border-radius: 50%;
+}
+
+/* ========= FOOTER SOCIAL ICONS ====================== */
+.social-icons-container {
+	display: flex;
+	justify-content: center;
+}
+
+.social-icon {
+	margin: 1rem;
+	height: 55px;
+}
+
+.etsy {
+	height: 52px;
+	padding-top: 1px;
+}
+
+.footer-text-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: var(--main-orange-light);
+	color: var(--white);
+	padding: 1rem;
+	align-items: center;
+}
+
+@media (min-width: 576px) {
+
+	.footer-text-container {
+		flex-direction: row;
+	}
+}
+
+/* ========= MODAL ====================== */
+.modal-cta-container {
+	display: flex;
+	justify-content: center;
+	margin: 15px;
+}
+
+.modal-cta-button {
+	width: 20rem;
+	height: 5rem;
+}
+
+.modal-header {
+	background-color: var(--main-orange-light);
+}
+
+.modal-title {
+	color: var(--white);
+}
+
+/* ========= PORTFOLIO ====================== */
+main.gallery {
+	padding: 2rem;
+}
+
+.gallery > h1 {
+	font-size: 3rem;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	margin-bottom: 1rem;
+	color: #333;
+	font-weight: 100;
+}
+
+.gallery > .gallery__list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+	grid-template-rows: repeat(6, 200px);
+	grid-gap: 1rem;
+	grid-auto-flow: dense;
+}
+
+.gallery > .gallery__list > li:nth-child(4n) {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+.gallery > .gallery__list > li:nth-child(8n) {
+	grid-column: span 3;
+	grid-row: span 3;
+}
+
+.gallery > .gallery__list > li > figure {
+	height: 100%;
+}
+
+.gallery > .gallery__list > li > figure > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+ul,
+li {
+	list-style-type: none;
+	padding: 0;
+}
+
+@media (min-width: 678px) {
+
+	.gallery {
+		padding: 0 2rem;
+	}
+}
+
+:root {
+	--commissions-grey: rgb(215, 219, 224);
+}
+
+/* ========= COMMISSIONS ====================== */
+.commissioned-work-block {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (min-width: 768px) {
+
+	.commissioned-work-block {
+		align-items: flex-start;
+	}
+}
+
+.commissioned-work-block:nth-child(even) {
+	flex-direction: row-reverse;
+}
+
+.commissioned-work-block > * {
+	margin: 1rem;
+}
+
+.tab-img-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.tab-img {
+	width: 250px;
+}
+
+.yellow-tab-theme {
+	border: 1px solid rgba(254, 197, 107, 0.4);
+}
+
+.yellow-tab-theme .nav {
+	border: none;
+	height: 4rem;
+	width: 100%;
+}
+
+.yellow-tab-theme .nav-link {
+	color: var(--white);
+	border: none;
+	border-radius: 0;
+	padding-inline: 2rem;
+	flex: 1;
+	background: var(--main-orange-light);
+}
+
+@media (min-width: 992px) {
+
+	.yellow-tab-theme .nav-link {
+		font-size: 1.2rem;
+	}
+}
+
+.yellow-tab-theme .nav-link:hover,
+.yellow-tab-theme .nav-link:focus {
+	color: var(--main-orange);
+	border: none;
+}
+
+.yellow-tab-theme .nav-link.active {
+	color: var(--main-orange);
+	background: var(--white);
+	font-weight: 500;
+	border: none;
+	flex: 1;
+}
+
+/* ========= ABOUT ME PAGE====================== */
+.profile-img {
+	min-height: 200px;
+	width: 200px;
+}
+
+.art-category-button {
+	height: 100px;
+	width: 20rem;
+	background-color: var(--white);
+	border-radius: 5px;
+	margin: 15px;
+}
+
+.art-category-container {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+@media (min-width: 678px) {
+
+	.profile-img {
+		width: 250px;
+	}
+
+	.about-container {
+		flex-wrap: nowrap;
+	}
+}
+
+@media (min-width: 992px) {
+
+	.art-category-button {
+		width: 300px;
+	}
+}
+
+/* ========= MEDIA QUERY VARIABLES====================== */
+
+/* Extra small devices (portrait phones, less than 576px) */
+
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+
+/* @media (min-width: 576px) {
+  ...;
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  ...;
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  ...;
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  ...;
+}
+
+@include media-breakpoint-up(xs) {
+  ...;
+}
+@include media-breakpoint-up(sm) {
+  ...;
+}
+@include media-breakpoint-up(md) {
+  ...;
+}
+@include media-breakpoint-up(lg) {
+  ...;
+}
+@include media-breakpoint-up(xl) {
+  ...;
+} */
+
+/* ========= CONTACT ====================== */
+.wp-block-media-text {
+	grid-gap: 2rem;
+	gap: 2rem;
+}
+
+.wp-block-media-text .wp-block-media-text__content {
+	padding: 0;
+}
+
+.alignfull {
+	width: 100vw;
+	max-width: 100vw;
+	margin-left: calc(50% - 50vw);
+}
+
+@media screen and (min-width: 960px) {
+
+	.alignwide {
+		width: 80vw;
+		max-width: 80vw;
+		margin-left: calc(50% - 40vw);
+	}
+}
+
+body {
+	overflow-x: hidden;
+}
+
+.about-page-media-text-alignment img {
+	max-width: 150px;
+}
+
+@media screen and (min-width: 600px) {
+
+	.about-page-media-text-alignment img {
+		max-width: 100%;
+	}
+}

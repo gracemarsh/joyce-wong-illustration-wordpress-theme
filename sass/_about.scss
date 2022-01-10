@@ -1,0 +1,35 @@
+/* ========= ABOUT ME PAGE====================== */
+
+.profile-img {
+  min-height: 200px;
+  width: 200px;
+}
+
+.art-category-button {
+  height: 100px;
+  width: 20rem;
+  background-color: var(--white);
+  border-radius: 5px;
+  margin: 15px;
+}
+
+.art-category-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 678px) {
+  .profile-img {
+    width: 250px;
+  }
+  .about-container {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 992px) {
+  .art-category-button {
+    width: 300px;
+  }
+}

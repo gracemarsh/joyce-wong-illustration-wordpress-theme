@@ -1,0 +1,23 @@
+/*!
+Theme Name: Joyce Wong Concept Artist
+Theme URI: http://underscores.me/
+Author: Grace Marsh
+Author URI: https://gracemarsh.github.io/
+Description: Portfolio website for Joyce Wong concept artist
+Version: 1.0.0
+Text Domain: joycewongconceptartist
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+Joyce Wong Concept Artist is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+
+// import your sass files here @grace
+// @import "./node_modules/bootstrap/scss/bootstrap.scss";
+@import "./colors.scss";
+@import "./custom.scss";
+@import "./portfolio.scss";
+@import "./commissions.scss";
+@import "./about.scss";
+@import "./contact.scss";
+@import "./wp-classes.scss";
