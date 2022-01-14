@@ -524,3 +524,19 @@ body {
   @media screen and (min-width: 600px) {
     .about-page-media-text-alignment img {
       max-width: 100%; } }
+
+.coblocks-lightbox__background {
+  background-image: none !important;
+  background-color: #000;
+  filter: brightness(100%) opacity(40%); }
+
+.coblocks-lightbox__close,
+.coblocks-lightbox__close:hover,
+.coblocks-lightbox__arrow > div {
+  background-color: #3c3c3c; }
+
+.coblocks-lightbox__heading {
+  color: #3c3c3c; }
+
+#slb_viewer_wrap .slb_theme_slb_baseline .slb_container {
+  padding: 0; }
