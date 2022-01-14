@@ -93,8 +93,8 @@ a:active {
 
 // logo spacing
 .custom-logo-link img {
-  height: auto;
-  max-width: 3rem;
+  width: auto;
+  max-height: 3.5rem;
 }
 
 // Mobile nav
@@ -170,9 +170,14 @@ a:active {
   display: none;
   position: absolute;
   z-index: 1;
-  background: var(--main-orange-light);
+  background-color: rgba(255, 255, 255, 0.9);
   top: 4.4rem;
   left: 0;
+
+  @media (min-width: 992px) {
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05);
+  }
 }
 
 .sub-menu .menu-item a {
@@ -225,7 +230,15 @@ a:active {
 }
 // nav background
 .navbar-light {
-  background-color: var(--main-orange-light);
+  background-color: rgba(255, 255, 255, 1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0);
+  transition: all 400ms ease-out;
+
+  .scrolled & {
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.04);
+    background-color: rgba(255, 255, 255, 0.5);
+  }
 }
 
 // Nav brand title
@@ -233,13 +246,13 @@ a:active {
 .navbar-light .navbar-brand:hover,
 .navbar-light .navbar-brand:focus,
 .navbar-light .navbar-brand:active {
-  color: var(--white);
+  color: var(--title-dark);
   font-weight: 600;
 }
 
 // Top level nav items white
 .navbar.navbar-light .menu-item {
-  color: var(--white);
+  color: var(--title-dark);
 }
 
 // hover state light orange
@@ -273,6 +286,7 @@ a:active {
 // light hamburger icon overriding default dark
 .navbar-light .navbar-toggler-icon {
   background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  filter: invert(100%);
 }
 
 // full height center flex buttons
