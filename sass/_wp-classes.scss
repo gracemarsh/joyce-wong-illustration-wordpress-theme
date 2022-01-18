@@ -59,3 +59,8 @@ body {
 #slb_viewer_wrap .slb_theme_slb_baseline .slb_container {
   padding: 0 !important;
 }
+
+// changing the wp contact form7's insertion of line breaks (makes the contact form way too long)
+form.wpcf7-form br {
+  display: none;
+}

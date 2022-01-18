@@ -341,7 +341,10 @@ a:active {
   background-color: var(--main-orange-light); }
 
 .modal-title {
-  color: var(--white); }
+  color: var(--white);
+  text-align: center;
+  flex-grow: 1;
+  font-size: 1.5rem; }
 
 /* ========= PORTFOLIO ====================== */
 main.gallery {
@@ -551,3 +554,6 @@ body {
 
 #slb_viewer_wrap .slb_theme_slb_baseline .slb_container {
   padding: 0 !important; }
+
+form.wpcf7-form br {
+  display: none; }
