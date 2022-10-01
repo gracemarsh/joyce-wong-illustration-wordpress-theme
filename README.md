@@ -38,14 +38,24 @@ $ npm install
 
 ### Website Plugins Used
 
-#### Simple Lightbox
+#### CoBlocks
 
-The simple lightbox automatically turns _any_ link to a media file (e.g. /wp-content/uploads/2022/illustration-01.jpg) into a lightbox trigger. To enable it for an image, ensure the image in the WordPress visual editor has a link set to the media file.
+Page Builder Gutenberg Blocks – [CoBlocks](https://wordpress.org/plugins/coblocks/)
+This provides gallery blocks with a lightbox option.
 
-### Theme customising
+#### Contact Form 7
+
+[Contact Form 7](https://wordpress.org/plugins/contact-form-7/)
+Create a contact form that allows user to email you without exposing your email address.
+
+#### Smash Balloon Instagram Feed
+
+[Smash Balloon Social Photo Feed](https://wordpress.org/plugins/instagram-feed/)
+Display Instagram posts from your Instagram accounts, either in the same single feed or in multiple different ones.
+
+### Customizing this theme
 
 This theme uses SCSS files which are compliled into a single CSS file. Future changes _must_ be made the source SCSS files to ensure a single source of truth.
-
 Additional CSS may be added from the WordPress customizer. This doesn't modify the theme styles, but will be loaded additionally.
 
 This theme uses [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) (AKA CSS Variables). This enables some of the theme's colors to be changed without having to modify the theme itself.
