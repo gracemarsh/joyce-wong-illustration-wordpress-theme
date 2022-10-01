@@ -96,6 +96,9 @@ a:active {
 .custom-logo-link img {
   width: auto;
   max-height: 3.5rem; }
+  @media (min-width: 992px) {
+    .custom-logo-link img {
+      max-height: 4.5rem; } }
 
 .mobile-nav .menu-primary-menu-container .menu,
 .mobile-nav .menu-primary-menu-container .menu .menu-item,

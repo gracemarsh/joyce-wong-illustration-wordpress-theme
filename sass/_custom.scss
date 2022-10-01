@@ -95,6 +95,9 @@ a:active {
 .custom-logo-link img {
   width: auto;
   max-height: 3.5rem;
+  @media (min-width: 992px) {
+    max-height: 4.5rem;
+  }
 }
 
 // Mobile nav

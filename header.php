@@ -42,7 +42,7 @@
 				<div class="container-fluid">
 					<div class="d-flex w-100">
 
-						<div class="p-2 ps-0">
+						<div class="p-2 p-lg-3 ps-0 ps-lg-0">
 							<?php the_custom_logo(); ?>
 						</div>
 
