@@ -1,10 +1,24 @@
 /* ========= COLORS ====================== */
 
+// Default Joyce Wong Illustration Theme Colors
+// Theme-consumed colors allowing custom values to override
 :root {
-  --main-orange: rgb(240, 155, 20);
-  --main-orange-light: rgb(254, 197, 107);
-  --white: #fff;
-  --body-dark: #0e0c0c;
-  --title-dark: #333;
-  --transparent-white: #fffc;
+  --main-orange: var(--custom-main-orange, rgb(240, 155, 20));
+  --main-orange-light: var(--custom-main-orange-light, rgb(254, 197, 107));
+  --white: var(--custom-white, #fff);
+  --body-dark: var(--custom-body-dark, #0e0c0c);
+  --title-dark: var(--custom-title-dark, #333);
+  --transparent-white: var(--custom-transparent-white, #fffc);
 }
+
+// These colours can be changed by adding the following to the WordPress customizer Additional CSS section.
+
+// Override the Joyce Wong Theme colours with these variables.
+// :root {
+//   --custom-main-orange: red;
+//   --custom-main-orange-light: orange;
+//   --custom-white: yellow;
+//   --custom-body-dark: blue;
+//   --custom-title-dark: indigo;
+//   --custom-transparent-white: violet;
+// }
